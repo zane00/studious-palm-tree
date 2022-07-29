@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,9 +9,9 @@ import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm = new FormGroup({
-    username: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required)
+  loginForm = new UntypedFormGroup({
+    username: new UntypedFormControl('', Validators.required),
+    password: new UntypedFormControl('', Validators.required)
   });
 
   faUser = faUser;
@@ -22,6 +22,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void { }
 
   onSubmit() {
-    // console.log(this.loginForm.value);
+    console.log(this.loginForm.value);
   }
 }

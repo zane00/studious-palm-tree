@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { faUser, faKey, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,11 +9,11 @@ import { faUser, faKey, faEnvelope } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registerForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    username: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required),
+  registerForm = new UntypedFormGroup({
+    name: new UntypedFormControl('', Validators.required),
+    username: new UntypedFormControl('', Validators.required),
+    email: new UntypedFormControl('', Validators.required),
+    password: new UntypedFormControl('', Validators.required),
   });
 
   faUser = faUser;
